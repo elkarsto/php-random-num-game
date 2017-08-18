@@ -23,10 +23,9 @@ if ($_POST) {
         $_SESSION['counter'] ++;
         $message .= " Du hast " . $_SESSION['counter'] . " Versuche gebraucht.";
         $_SESSION['counter'] = 0;
-        
     } else {
-        $message = "Leider Falsch, ";
-        $_SESSION['counter']++;
+        $message = "Leider falsch, ";
+        $_SESSION['counter'] ++;
 
         if ($_POST['zahl'] < $random_num) {
             $message = $message . "dein Wert liegt unter der Zufallszahl!";
@@ -37,8 +36,6 @@ if ($_POST) {
         }
     }
 }
-
-
 ?>
 <!DOCTYPE HTML>
 <html>
@@ -53,7 +50,7 @@ if ($_POST) {
             <label>Zahl <input id="auswahl" type="number" name="zahl" min="1" max="100" ></label>
             <button type="submit" id="übermitteln">Vergleichen</button>
         </form>
-       
-        
+
+
     </body>
 </html>
